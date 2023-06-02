@@ -202,7 +202,7 @@ footer {
 .social-links a i {
   font-size: 48px;
   color: #0f0;
-  transition: color 0.75s ease;
+  transition: color 0.5s ease;
 }
 
 .social-links a i:hover {
@@ -222,7 +222,7 @@ footer {
   width: 200px;
   height: 50px;
   border-radius: 15px;
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
 }
 
 #middleButton:hover {
@@ -255,10 +255,16 @@ footer {
   color: #0f0;
 }
 
+.project-item span {
+  margin-left: 2%;
+  font-size: xx-large;
+  margin-right: 2%;
+}
+
 .project-item a {
   margin-left: 2.5%;
   margin-right: 20px;
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
 }
 
