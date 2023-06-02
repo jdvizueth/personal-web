@@ -99,7 +99,6 @@ footer {
 
 #name-section h2 {
   font-size: 60px;
-  margin-bottom: 20px;
   font-family: 'Courier New', monospace;
   padding: 10px 0;
   color: #0f0;
@@ -148,6 +147,14 @@ footer {
   font-size: 20px;
 }
 
+#name-section h3 {
+  font-size: 20px;
+  font-family: 'Courier New', monospace;
+  padding: 10px 0;
+  color: #0f0;
+  font-weight: 100;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -172,6 +179,16 @@ footer {
 
 .social-links a i:hover {
   color: #fff;
+}
+
+#middleButton a {
+  font-size: 20px;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  background-color: transparent;
+  outline-style: solid;
+  outline-width: 2px;
+  /* box-shadow: none; */
 }
 
 #about {
