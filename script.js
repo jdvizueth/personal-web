@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentCharacter < logoText.length) {
       logoElement.textContent += logoText.charAt(currentCharacter);
       currentCharacter++;
-      setTimeout(typeLogo, 150);
+      setTimeout(typeLogo, 75);
     } else {
       logoElement.style.width = logoElement.offsetWidth + 'px';
     }
