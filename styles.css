@@ -56,11 +56,44 @@ nav ul li a:hover {
 
 /* Apply styles to the About Me section */
 #about {
-  background-color: #fff;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 5px;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+}
+
+.about-content img {
+  width: 30%;
+  height: 30%;
+  /* Adjust the width of the image as needed */
+  margin: 100px;
+  /* Add some spacing between the image and text */
+}
+
+.text-content {
+  flex-grow: 1;
+}
+
+/* Additional styles for the text content */
+.text-content h1 {
+  margin-bottom: 50px;
+  font-size: 50px;
+  font-family: 'Courier New', monospace;
+  color: rgb(0, 200, 0);
+  font-weight: 300;
+}
+
+.text-content p {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: 'Courier New', monospace;
+  color: rgb(0, 200, 0);
+  font-weight: 200;
 }
 
 /* Apply styles to the footer */
@@ -164,11 +197,6 @@ footer {
 .social-links a {
   margin: 0 10px;
 }
-
-/* 
-.social-links a:hover {
-  color: #fff;
-} */
 
 /* Adjust the size and color of the icons */
 .social-links a i {
