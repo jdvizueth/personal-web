@@ -248,17 +248,36 @@ footer {
   font-weight: 300;
 }
 
+/* .slideshow-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  transition: transform 0.3s ease-in-out;
+} */
+
 .project-item {
   display: flex;
   align-items: center;
   padding-bottom: 100px;
   color: #0f0;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
-.project-item span {
+.prev-arrow,
+.next-arrow {
+  position: absolute;
   margin-left: 2%;
   font-size: xx-large;
   margin-right: 2%;
+}
+
+.prev-arrow {
+  left: 0;
+}
+
+.next-arrow {
+  right: 0;
 }
 
 .project-item a {

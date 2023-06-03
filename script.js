@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentIndex = currentIndex + 1
       }
       console.log('nextPasses')
+      // item.style.transform = `translateX(${-20}%)`;
       updateProjectVisibility();
     });
 
