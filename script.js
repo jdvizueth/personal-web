@@ -3,25 +3,6 @@ logo.addEventListener('click', () => {
   window.location.href = 'index.html';
 });
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const logoElement = document.getElementById('logo');
-//   const logoText = 'Jose Vizueth';
-//   let currentCharacter = 0;
-
-//   function typeLogo() {
-//     if (currentCharacter < logoText.length) {
-//       logoElement.textContent += logoText.charAt(currentCharacter);
-//       currentCharacter++;
-//       setTimeout(typeLogo, 150);
-//     } else {
-//       logoElement.style.width = logoElement.offsetWidth + 'px';
-//     }
-//   }
-
-//   typeLogo();
-// });
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const logoElement = document.getElementById('name');
   const logoText = 'Jose Vizueth';
@@ -39,6 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   typeLogo();
 });
+
+function typeOutText(element, text, speed) {
+  let index = 0;
+  const intervalId = setInterval(() => {
+    element.textContent += text[index];
+    index++;
+    if (index >= text.length) {
+      clearInterval(intervalId);
+    }
+  }, speed);
+}
+
 
 let currentIndex = 0;
 document.addEventListener('DOMContentLoaded', function () {
@@ -67,19 +60,61 @@ document.addEventListener('DOMContentLoaded', function () {
         currentIndex = currentIndex + 1
       }
       console.log('nextPasses')
-      // item.style.transform = `translateX(${-20}%)`;
       updateProjectVisibility();
     });
 
     function updateProjectVisibility() {
       projectItems.forEach((item, index) => {
-        item.style.display = index === currentIndex ? 'flex' : 'none';
-        console.log('current Index:', currentIndex)
+        if (index === currentIndex) {
+          item.style.display = 'flex';
+          const projectTitle = item.querySelector('.project-title');
+          const titleText = projectTitle.getAttribute('data-title');
+          projectTitle.textContent = ''; // Clear existing title text
+          typeOutText(projectTitle, titleText, 100); // Type out the new title
+        } else {
+          item.style.display = 'none';
+        }
       });
     }
+  });
+  projectItems.forEach((item, index) => {
+    if (index === currentIndex) {
+      item.style.display = 'flex';
+      const projectTitle = item.querySelector('.project-title');
+      const titleText = projectTitle.getAttribute('data-title');
+      projectTitle.textContent = ''; // Clear existing title text
+      typeOutText(projectTitle, titleText, 100); // Type out the new title
+    } else {
+      item.style.display = 'none';
+    }
+  });
+});
 
-    // Initially show only the first project
-    updateProjectVisibility();
-    console.log('passes here')
+
+document.addEventListener('DOMContentLoaded', function () {
+  const skillItems = document.querySelectorAll('.skill-item');
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const skillItem = entry.target;
+        const skillTitle = skillItem.querySelector('.skill-title');
+        const skillDesc = skillItem.querySelector('.skill-description');
+        const titleText = skillTitle.getAttribute('data-title');
+        const descText = skillDesc.getAttribute('data-description');
+        typeOutText(skillTitle, titleText, 100);
+        typeOutText(skillDesc, descText, 10);
+        observer.unobserve(skillItem);
+      }
+    });
+  }, observerOptions);
+
+  skillItems.forEach((item) => {
+    observer.observe(item);
   });
 });

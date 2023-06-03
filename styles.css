@@ -248,13 +248,6 @@ footer {
   font-weight: 300;
 }
 
-/* .slideshow-container {
-  display: flex;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  transition: transform 0.3s ease-in-out;
-} */
-
 .project-item {
   display: flex;
   align-items: center;
@@ -262,6 +255,8 @@ footer {
   color: #0f0;
   margin-left: 2%;
   margin-right: 2%;
+  scroll-behavior: smooth;
+  transition: transform 0.3s ease-in-out;
 }
 
 .prev-arrow,
@@ -327,6 +322,45 @@ footer {
   font-size: 20px;
   font-family: 'Courier New', monospace;
   font-weight: 100;
+}
+
+#skills {
+  padding: 50px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skill-item {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.skill-item h2 {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  animation: typing 2s steps(20, end);
+}
+
+.skill-item p {
+  display: flex;
+  font-size: xx-large;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: auto;
+  }
 }
 
 footer {
