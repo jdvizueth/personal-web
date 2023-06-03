@@ -139,7 +139,6 @@ footer {
   overflow: hidden;
   width: auto;
   font-weight: 300;
-  /* Initially set width to 0 */
 }
 
 #name-section h2::after {
@@ -326,42 +325,41 @@ footer {
 
 #skills {
   padding: 50px;
+  font-family: 'Courier New', monospace;
+  background-color: #000;
+  text-align: center;
 }
 
-.skills-container {
+#skills h1 {
+  padding-bottom: 100px;
+  padding-top: 5%;
+  color: #0f0;
+  font-size: 40px;
+  font-family: 'Courier New', monospace;
+  font-weight: 300;
+}
+
+.skill-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.skill-item {
+.skill-card {
   width: 48%;
+  /* Adjust the width as needed */
   margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
 }
 
-.skill-item h2 {
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid;
-  animation: typing 2s steps(20, end);
+.skill-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.skill-item p {
-  display: flex;
-  font-size: xx-large;
-}
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: auto;
-  }
-}
 
 footer {
   background-color: #333;

@@ -28,8 +28,21 @@ function typeOutText(element, text, speed) {
     index++;
     if (index >= text.length) {
       clearInterval(intervalId);
+      startCaretBlink(element);
     }
   }, speed);
+}
+
+
+function startCaretBlink(element) {
+  element.innerHTML += '<span class="caret">|</span>';
+  const caret = element.querySelector('.caret');
+  const blinkIntervalId = setInterval(() => {
+    caret.style.visibility = caret.style.visibility === 'visible' ? 'hidden' : 'visible';
+  }, 500); // Adjust blinking speed as desired
+
+  // Stop blinking when necessary, for example:
+  // clearInterval(blinkIntervalId);
 }
 
 
@@ -107,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const skillDesc = skillItem.querySelector('.skill-description');
         const titleText = skillTitle.getAttribute('data-title');
         const descText = skillDesc.getAttribute('data-description');
-        typeOutText(skillTitle, titleText, 100);
+        typeOutText(skillTitle, titleText, 200);
         typeOutText(skillDesc, descText, 10);
         observer.unobserve(skillItem);
       }
@@ -117,4 +130,32 @@ document.addEventListener('DOMContentLoaded', function () {
   skillItems.forEach((item) => {
     observer.observe(item);
   });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const skillCards = document.querySelectorAll('.skill-card');
+
+  function checkVisibility() {
+    skillCards.forEach((card) => {
+      if (isElementInViewport(card)) {
+        card.classList.add('show');
+      }
+    });
+  }
+
+  function isElementInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Initial check when page loads
+  checkVisibility();
+
+  // Check visibility on scroll
+  window.addEventListener('scroll', checkVisibility);
 });
