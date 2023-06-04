@@ -33,19 +33,6 @@ function typeOutText(element, text, speed) {
   }, speed);
 }
 
-
-function startCaretBlink(element) {
-  element.innerHTML += '<span class="caret">|</span>';
-  const caret = element.querySelector('.caret');
-  const blinkIntervalId = setInterval(() => {
-    caret.style.visibility = caret.style.visibility === 'visible' ? 'hidden' : 'visible';
-  }, 500); // Adjust blinking speed as desired
-
-  // Stop blinking when necessary, for example:
-  // clearInterval(blinkIntervalId);
-}
-
-
 let currentIndex = 0;
 document.addEventListener('DOMContentLoaded', function () {
   const projectItems = document.querySelectorAll('.project-item');
@@ -104,33 +91,33 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const skillItems = document.querySelectorAll('.skill-item');
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0
-  };
+// document.addEventListener('DOMContentLoaded', function () {
+//   const skillItems = document.querySelectorAll('.skill-item');
+//   const observerOptions = {
+//     root: null,
+//     rootMargin: '0px',
+//     threshold: 0
+//   };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const skillItem = entry.target;
-        const skillTitle = skillItem.querySelector('.skill-title');
-        const skillDesc = skillItem.querySelector('.skill-description');
-        const titleText = skillTitle.getAttribute('data-title');
-        const descText = skillDesc.getAttribute('data-description');
-        typeOutText(skillTitle, titleText, 200);
-        typeOutText(skillDesc, descText, 10);
-        observer.unobserve(skillItem);
-      }
-    });
-  }, observerOptions);
+//   const observer = new IntersectionObserver((entries, observer) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         const skillItem = entry.target;
+//         const skillTitle = skillItem.querySelector('.skill-title');
+//         const skillDesc = skillItem.querySelector('.skill-description');
+//         const titleText = skillTitle.getAttribute('data-title');
+//         const descText = skillDesc.getAttribute('data-description');
+//         typeOutText(skillTitle, titleText, 200);
+//         typeOutText(skillDesc, descText, 10);
+//         observer.unobserve(skillItem);
+//       }
+//     });
+//   }, observerOptions);
 
-  skillItems.forEach((item) => {
-    observer.observe(item);
-  });
-});
+//   skillItems.forEach((item) => {
+//     observer.observe(item);
+//   });
+// });
 
 document.addEventListener('DOMContentLoaded', function () {
   const skillCards = document.querySelectorAll('.skill-card');

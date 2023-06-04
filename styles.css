@@ -330,7 +330,7 @@ footer {
   text-align: center;
 }
 
-#skills h1 {
+#skills h2 {
   padding-bottom: 100px;
   padding-top: 5%;
   color: #0f0;
@@ -343,15 +343,57 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .skill-card {
-  width: 48%;
+  width: 40%;
   /* Adjust the width as needed */
   margin-bottom: 20px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
+  background-color: #1a1a1a;
+  border-radius: 5%;
+  transition: transform 0.3s ease, outline-color 0.3s ease;
+  /* outline-color: transparent; */
+  /* Initial outline color */
+}
+
+.skill-card img {
+  width: 20%;
+  height: auto;
+  margin-top: 10%;
+  margin-bottom: 12%;
+}
+
+.skill-card div {
+  color: #0f0;
+  font-size: 100px;
+  margin-top: 10%;
+  margin-bottom: 0px;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  outline-color: red;
+  /* New outline color on hover */
+
+}
+
+.skill-title {
+  color: #0f0;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.skill-description {
+  color: green;
+  font-size: 25px;
+  font-weight: 100;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
 }
 
 .skill-card.show {
