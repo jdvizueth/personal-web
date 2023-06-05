@@ -60,19 +60,31 @@ nav ul li a:hover {
   color: white;
   text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 2.5%;
 }
 
 .about-content {
   display: flex;
+  padding: 2.5%;
   align-items: center;
 }
 
 .about-content img {
-  width: 30%;
-  height: 30%;
+  width: 40%;
+  height: 40%;
   /* Adjust the width of the image as needed */
-  margin: 100px;
+  margin-right: 40px;
+  margin-top: 40px;
   /* Add some spacing between the image and text */
+  border-radius: 15px;
+  box-shadow: -1rem -1rem green;
+}
+
+.about-content img:hover {
+  transition-duration: 0.2s;
+  box-shadow: -2rem -2rem green;
+  transform: translateY(10px);
+  transform: translateX(10px);
 }
 
 .text-content {
@@ -229,10 +241,6 @@ footer {
   background-color: green;
 }
 
-#about {
-  padding: 20px;
-}
-
 #projects {
   background-color: #000;
   text-align: center;
@@ -332,7 +340,7 @@ footer {
 
 #skills h2 {
   padding-bottom: 100px;
-  padding-top: 5%;
+  /* padding-top: 5%; */
   color: #0f0;
   font-size: 40px;
   font-family: 'Courier New', monospace;
@@ -350,15 +358,12 @@ footer {
 .skill-card {
   width: 40%;
   /* Adjust the width as needed */
-  margin-bottom: 20px;
+  /* position: relative; */
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(40px);
   transition: opacity 0.5s, transform 0.5s;
   background-color: #1a1a1a;
-  border-radius: 5%;
-  transition: transform 0.3s ease, outline-color 0.3s ease;
-  /* outline-color: transparent; */
-  /* Initial outline color */
+  border-radius: 12px;
 }
 
 .skill-card img {
@@ -376,9 +381,8 @@ footer {
 }
 
 .skill-card:hover {
-  transform: translateY(-10px);
-  outline-color: red;
-  /* New outline color on hover */
+  transition-duration: 0.2s;
+  box-shadow: 0 0 1rem #0f0;
 
 }
 
@@ -401,10 +405,59 @@ footer {
   transform: translateY(0);
 }
 
+#contact {
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  background-color: #333;
+  padding: 5%;
+}
 
+#contact h2 {
+  color: #0f0;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+#contact p {
+  color: #0f0;
+  font-size: 20px;
+  font-weight: 100;
+  padding-bottom: 2%;
+}
+
+#contact button {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  position: relative;
+}
+
+#contact button:hover {
+  background-color: green;
+  color: #fff;
+  transition-duration: 0.2s;
+  box-shadow: 1rem 1rem 0 black;
+  transform: translateY(-10px);
+  transform: translateX(-10px);
+}
+
+#contact button:active {
+  box-shadow: 0.5rem 0.5rem 0 black;
+  transform: translateY(-5px);
+  transform: translateX(-5px);
+}
 
 footer {
-  background-color: #333;
+  background-color: #000;
   color: #fff;
   text-align: center;
   padding: 10px;

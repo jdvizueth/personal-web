@@ -28,7 +28,6 @@ function typeOutText(element, text, speed) {
     index++;
     if (index >= text.length) {
       clearInterval(intervalId);
-      startCaretBlink(element);
     }
   }, speed);
 }
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const projectTitle = item.querySelector('.project-title');
           const titleText = projectTitle.getAttribute('data-title');
           projectTitle.textContent = ''; // Clear existing title text
-          typeOutText(projectTitle, titleText, 100); // Type out the new title
+          typeOutText(projectTitle, titleText, 50); // Type out the new title
         } else {
           item.style.display = 'none';
         }
@@ -83,41 +82,12 @@ document.addEventListener('DOMContentLoaded', function () {
       const projectTitle = item.querySelector('.project-title');
       const titleText = projectTitle.getAttribute('data-title');
       projectTitle.textContent = ''; // Clear existing title text
-      typeOutText(projectTitle, titleText, 100); // Type out the new title
+      typeOutText(projectTitle, titleText, 50); // Type out the new title
     } else {
       item.style.display = 'none';
     }
   });
 });
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   const skillItems = document.querySelectorAll('.skill-item');
-//   const observerOptions = {
-//     root: null,
-//     rootMargin: '0px',
-//     threshold: 0
-//   };
-
-//   const observer = new IntersectionObserver((entries, observer) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         const skillItem = entry.target;
-//         const skillTitle = skillItem.querySelector('.skill-title');
-//         const skillDesc = skillItem.querySelector('.skill-description');
-//         const titleText = skillTitle.getAttribute('data-title');
-//         const descText = skillDesc.getAttribute('data-description');
-//         typeOutText(skillTitle, titleText, 200);
-//         typeOutText(skillDesc, descText, 10);
-//         observer.unobserve(skillItem);
-//       }
-//     });
-//   }, observerOptions);
-
-//   skillItems.forEach((item) => {
-//     observer.observe(item);
-//   });
-// });
 
 document.addEventListener('DOMContentLoaded', function () {
   const skillCards = document.querySelectorAll('.skill-card');
@@ -145,4 +115,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Check visibility on scroll
   window.addEventListener('scroll', checkVisibility);
+});
+
+// Replace "your-email@example.com" with your actual email address
+const email = "your-email@example.com";
+const contactButton = document.getElementById("contact-button");
+
+contactButton.addEventListener("click", () => {
+  const subject = "Inquiry from Website";
+  const body = "Hello,\n\nI would like to get in touch regarding...";
+  const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailtoUrl;
 });
