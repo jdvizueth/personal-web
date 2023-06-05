@@ -28,7 +28,7 @@ nav {
   left: 0;
   width: 100%;
   background-color: #000;
-  color: #fff;
+  /* color: green; */
   z-index: 1;
 }
 
@@ -45,13 +45,13 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: rgb(0, 200, 0);
   text-decoration: none;
   padding: 10px;
 }
 
 nav ul li a:hover {
-  background-color: #555;
+  color: white;
 }
 
 /* Apply styles to the About Me section */
@@ -213,7 +213,7 @@ footer {
 .social-links a i {
   font-size: 48px;
   color: #0f0;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 }
 
 .social-links a i:hover {
@@ -357,8 +357,9 @@ footer {
 
 .skill-card {
   width: 40%;
+  width: calc(33.33% - 20px);
   /* Adjust the width as needed */
-  /* position: relative; */
+  margin-bottom: 20px;
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.5s, transform 0.5s;
