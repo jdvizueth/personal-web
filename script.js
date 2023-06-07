@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
           item.style.display = 'flex';
           const projectTitle = item.querySelector('.project-title');
           const titleText = projectTitle.getAttribute('data-title');
-          projectTitle.textContent = ''; // Clear existing title text
-          typeOutText(projectTitle, titleText, 50); // Type out the new title
+          projectTitle.textContent = '';
+          typeOutText(projectTitle, titleText, 50);
         } else {
           item.style.display = 'none';
         }
@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function () {
       item.style.display = 'flex';
       const projectTitle = item.querySelector('.project-title');
       const titleText = projectTitle.getAttribute('data-title');
-      projectTitle.textContent = ''; // Clear existing title text
-      typeOutText(projectTitle, titleText, 50); // Type out the new title
+      projectTitle.textContent = '';
+      typeOutText(projectTitle, titleText, 50);
     } else {
       item.style.display = 'none';
     }
@@ -109,16 +109,12 @@ document.addEventListener('DOMContentLoaded', function () {
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
-
-  // Initial check when page loads
   checkVisibility();
-
-  // Check visibility on scroll
   window.addEventListener('scroll', checkVisibility);
 });
 
-// Replace "your-email@example.com" with your actual email address
-const email = "your-email@example.com";
+
+const email = "vizueth.jd@gmail.com";
 const contactButton = document.getElementById("contact-button");
 
 contactButton.addEventListener("click", () => {

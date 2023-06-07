@@ -1,4 +1,3 @@
-/* Reset some default browser styles */
 body,
 h1,
 h2,
@@ -13,7 +12,6 @@ li {
   padding: 0;
 }
 
-/* Apply basic styles to the entire page */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
@@ -21,14 +19,12 @@ body {
   color: #333;
 }
 
-/* Apply styles to the navigation area */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #000;
-  /* color: green; */
   z-index: 1;
 }
 
@@ -54,7 +50,6 @@ nav ul li a:hover {
   color: white;
 }
 
-/* Apply styles to the About Me section */
 #about {
   background-color: #1a1a1a;
   color: white;
@@ -72,12 +67,11 @@ nav ul li a:hover {
 .about-content img {
   width: 40%;
   height: 40%;
-  /* Adjust the width of the image as needed */
   margin-right: 40px;
   margin-top: 40px;
-  /* Add some spacing between the image and text */
   border-radius: 15px;
   box-shadow: -1rem -1rem green;
+  transition-duration: 0.2s;
 }
 
 .about-content img:hover {
@@ -91,7 +85,6 @@ nav ul li a:hover {
   flex-grow: 1;
 }
 
-/* Additional styles for the text content */
 .text-content h1 {
   margin-bottom: 50px;
   font-size: 50px;
@@ -108,7 +101,6 @@ nav ul li a:hover {
   font-weight: 200;
 }
 
-/* Apply styles to the footer */
 footer {
   background-color: #333;
   color: #fff;
@@ -126,9 +118,7 @@ footer {
   white-space: nowrap;
   overflow: hidden;
   width: 150px;
-  /* Fixed width for the logo element */
   position: relative;
-  /* Add position relative to create a reference for the cursor */
   cursor: pointer;
   font-size: 20px;
 }
@@ -209,7 +199,6 @@ footer {
   margin: 0 10px;
 }
 
-/* Adjust the size and color of the icons */
 .social-links a i {
   font-size: 48px;
   color: #0f0;
@@ -282,23 +271,14 @@ footer {
   right: 0;
 }
 
-.project-item a {
+.project-item video {
   margin-left: 2.5%;
   margin-right: 20px;
   max-width: 40%;
   height: auto;
 }
 
-.project-item a video {
-  max-width: 100%;
-  height: auto;
-}
-
-.project-item a video:hover {
-  filter: brightness(0.5);
-}
-
-.project-item a i {
+/* .project-item a i {
   position: absolute;
   font-size: 48px;
   color: #fff;
@@ -307,15 +287,19 @@ footer {
   transform: translate(-50%, -50%);
   opacity: 1;
   transition: opacity 0.3s ease;
-}
+} */
 
-.project-item a i:hover {
+/* .project-item a i:hover {
   opacity: 1;
-}
+} */
 
 .project-description {
   flex: 1;
   margin-right: 2.5%;
+}
+
+.project-description a {
+  text-decoration: none;
 }
 
 .project-description h2 {
@@ -323,6 +307,7 @@ footer {
   font-size: 30px;
   font-weight: 250;
   margin-bottom: 20px;
+  color: #0f0;
 }
 
 .project-description p {
@@ -340,7 +325,6 @@ footer {
 
 #skills h2 {
   padding-bottom: 100px;
-  /* padding-top: 5%; */
   color: #0f0;
   font-size: 40px;
   font-family: 'Courier New', monospace;
@@ -358,7 +342,6 @@ footer {
 .skill-card {
   width: 40%;
   width: calc(33.33% - 20px);
-  /* Adjust the width as needed */
   margin-bottom: 20px;
   opacity: 0;
   transform: translateY(40px);
@@ -368,10 +351,11 @@ footer {
 }
 
 .skill-card img {
-  width: 20%;
+  width: 40%;
   height: auto;
-  margin-top: 10%;
-  margin-bottom: 12%;
+  margin-top: 15%;
+  margin-bottom: 6%;
+  border-radius: 15px;
 }
 
 .skill-card div {
@@ -391,11 +375,12 @@ footer {
   color: #0f0;
   font-size: 40px;
   font-weight: 200;
+  overflow: scroll;
 }
 
 .skill-description {
   color: green;
-  font-size: 25px;
+  font-size: 17px;
   font-weight: 100;
   padding-left: 2.5%;
   padding-right: 2.5%;
@@ -440,6 +425,7 @@ footer {
   cursor: pointer;
   border-radius: 12px;
   position: relative;
+  transition-duration: 0.2s;
 }
 
 #contact button:hover {
@@ -462,4 +448,15 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px;
+}
+
+footer a {
+  background-color: #555;
+  text-decoration: none;
+  font-size: medium;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #fff;
+  border-radius: 15px;
+  margin: 4px;
 }

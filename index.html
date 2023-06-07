@@ -26,9 +26,9 @@
   <!-- Name Section -->
   <section id="name-section">
     <h2 id="name"></h2>
-    <h3 id="description">Goofy Goober</h3>
+    <h3 id="description">Programmer by Passion. Learner for Life.</h3>
     <div class="social-links">
-      <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://github.com/jdvizueth" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
     <button id="middleButton" onclick="scrollToSection(event, 'about')">More About Me</button>
@@ -37,16 +37,15 @@
   <!-- About Me Section -->
   <section id="about">
     <div class="about-content">
-      <img src="assets/cat.jpg" alt="About Me Image">
+      <img src="assets/darker-pfp.jpg" alt="About Me Image">
       <div class="text-content">
         <h1>About Me</h1>
-        <!-- Your content goes here -->
         <p>
-          I am a passionate web developer with a keen interest in front-end development. I love creating beautiful and
-          intuitive user interfaces using modern web technologies. In my free time, I enjoy experimenting with new
-          coding techniques, learning about the latest web development
-          trends, and working on personal projects. Feel free to explore my portfolio and get in touch if you have any
-          inquiries or collaboration opportunities.
+          I am a computer science student at Cornell University concentrating in Computer Vision and Machine Learning. I
+          am
+          passionate about exploring the frontiers of technology and harnessing its potential to make a
+          meaningful impact.
+          Some of my interests include Image Processing, Databases, and Full Stack Development.
         </p>
       </div>
     </div>
@@ -55,43 +54,65 @@
   <section id="projects">
     <h1>Projects</h1>
     <div class="slideshow-container">
-      <!-- Add more project entries as needed -->
       <div class="project-item">
         <span class="prev-arrow"><i class="fas fa-chevron-left"></i></span>
-        <a href="https://github.com/your-username/repository" target="_blank">
-          <video src="assets/goofyMovie.mp4" autoplay loop muted></video>
-        </a>
+        <video src="assets/dino-crop.mov" controls autoplay loop muted></video>
         <div class="project-description">
-          <h2 class="project-title" data-title="Image Editor V2"></h2>
-          <p>A simple image editor capable of isolating specific items from any image among many other features
-            including Image Generation through AI 🤖. I
+          <a href="https://github.com/jdvizueth/ImageEditorV2" target="_blank">
+            <h2 class="project-title" data-title="Image Editor V2 - Background Removal"></h2>
+          </a>
+          <p>A simple image editor capable of isolating specific items from any image among many other features. I
             created this after using the new iPhone
             feature where users can 'pop' a feature from an image, but I did not like that I was not able to choose
-            the image features I wanted, so I made my own application.</p>
+            the image features I wanted, so I made my own application with this specific feature.</p>
         </div>
         <span class="next-arrow"><i class="fas fa-chevron-right"></i></span>
       </div>
 
       <div class="project-item">
         <span class="prev-arrow"><i class="fas fa-chevron-left"></i></span>
-        <a href="https://github.com/your-username/repository2" target="_blank">
-          <video src="assets/goofyMovie.mp4" autoplay loop muted></video>
-        </a>
+        <video src="assets/image-gen.mov" controls autoplay loop muted></video>
         <div class="project-description">
-          <h2 class="project-title" data-title="Project 2"></h2>
-          <p>Description for Project 2 goes here...</p>
+          <a href="https://github.com/jdvizueth/ImageEditorV2" target="_blank">
+            <h2 class="project-title" data-title="Image Editor V2 - Image Generation"></h2>
+          </a>
+          <p>Another feature that is part of my Image Editor application. It uses the deepai api to create images based
+            on the user's prompt. This combined with the other features given in the application allows for specialized
+            image feature selection without the need to process them into multiple applications (takes a little to
+            load).</p>
         </div>
         <span class="next-arrow"><i class="fas fa-chevron-right"></i></span>
       </div>
 
       <div class="project-item">
         <span class="prev-arrow"><i class="fas fa-chevron-left"></i></span>
-        <a href="https://github.com/your-username/repository2" target="_blank">
-          <video src="assets/goofyMovie.mp4" autoplay loop muted></video>
-        </a>
+        <video src="assets/pocketcaml-vid.mp4" controls autoplay loop muted></video>
         <div class="project-description">
-          <h2 class="project-title" data-title="Project 3"></h2>
-          <p>Description for Project 3 goes here...</p>
+          <a href="https://github.com/jdvizueth/PocketCamls" target="_blank">
+            <h2 class="project-title" data-title="PocketCamls"></h2>
+          </a>
+          <p>One of my favorite projects so far. This game follows a similar formula of Pokémon, where camls fight to
+            become the very best. Created using the Ocaml programming language, it has heavy use of test-driven
+            development and
+            abstract data types.
+            Developed alongside 2 other members for my Data structures and Functional Programming class. I focused
+            mostly on the backened part of the game, such as the constructing the various data types and the different
+            scenes of the game. Also created the animation. All of which were fun to work on. </p>
+        </div>
+        <span class="next-arrow"><i class="fas fa-chevron-right"></i></span>
+      </div>
+
+      <div class="project-item">
+        <span class="prev-arrow"><i class="fas fa-chevron-left"></i></span>
+        <video src="assets/NapApp.mp4" controls autoplay loop muted></video>
+        <div class="project-description">
+          <a href="https://github.com/jdvizueth/NapApp" target="_blank">
+            <h2 class="project-title" data-title="NapApp"></h2>
+          </a>
+          <p>An app meant to display and reserve the best places to take naps throughout Cornell's campus. While a fun
+            project, sadly we had to bring the servers down. Created for Cornell's Hack Challenge by a group of 5. I
+            worked on the front-end part design using Swift and implemented the connection between the front-end and
+            the back-end</p>
         </div>
         <span class="next-arrow"><i class="fas fa-chevron-right"></i></span>
       </div>
@@ -106,21 +127,60 @@
           <i class="fab fa-python"></i> <!-- Replace this with the appropriate Font Awesome class -->
         </div>
         <!-- <img src="assets/python.png" alt="Skill 1 Image"> -->
-        <h3 class="skill-title">Skill 1</h3>
-        <p class="skill-description">I have about 2 and a half years of python, and I use it mostly for projects
+        <h3 class="skill-title">Python</h3>
+        <p class="skill-description">I have about 2 and a half years of Python experience, using it mostly for projects
           revolving computer vision and programs that requires SQL</p>
       </div>
       <div class="skill-card">
-        <img src="assets/python.png" alt="Skill 2 Image">
-        <h3 class="skill-title">Skill 2</h3>
-        <p class="skill-description">Description of Skill 2</p>
+        <div class="icon">
+          <i class="fab fa-java"></i> <!-- Replace this with the appropriate Font Awesome class -->
+        </div>
+        <h3 class="skill-title">Java</h3>
+        <p class="skill-description">I have about 2 years of Java experience. Used mostly to learn OOP but now used
+          mostly
+          to for anything that would require concurrency, multithreading, or
+          security.
+        </p>
       </div>
       <div class="skill-card">
-        <img src="assets/python.png" alt="Skill 2 Image">
-        <h3 class="skill-title">Skill 2</h3>
-        <p class="skill-description">Description of Skill 2</p>
+        <img src="assets/greeocaml.png" alt="Skill 3 Image">
+        <h3 class="skill-title">OCaml</h3>
+        <p class="skill-description">Introduced to OCaml during my functional programming class, I have about 1 year of
+          experience with it. In that time I have maneged to create a terminal game, an intrepreter, and other fun
+          projects. While wildly different from OOP, it is fun to use and sometimes better than OOP.
+        </p>
       </div>
-      <!-- Add more skill cards as needed -->
+      <div class="skill-card">
+        <div class="icon">
+          <i class="fab fa-swift"></i> <!-- Replace this with the appropriate Font Awesome class -->
+        </div>
+        <h3 class="skill-title">iOS Development (Swift)</h3>
+        <p class="skill-description">
+          While a recently acquired skill, only having about half a year of experience with it after taking Cornell's
+          AppDev iOS Development course, it's proven to be one of
+          the most fun methods to create something for the world to use.
+        </p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">
+          <i class="fab fa-html5"></i> <!-- Replace this with the appropriate Font Awesome class -->
+        </div>
+        <h3 class="skill-title">Web Development</h3>
+        <p class="skill-description">
+          A skill that helped me design this website from scratch. It brings me great satisfaction and joy using this
+          skill as I observe how my work comes to full fruition one step at a time.
+        </p>
+      </div>
+      <div class="skill-card">
+        <img src="assets/finalopencv.png" alt="Skill 6 Image">
+        <h3 class="skill-title">Computer Vision</h3>
+        <p class="skill-description">
+          Introduced to topics, such as image filtering and edge detection, in my
+          computer vision class. I make projects in order
+          to learn more technologies around this. It has also given me a ton of experience with libraries such as NumPy,
+          OpenCV, PIL, and the like.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -133,7 +193,14 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2023 John Doe</p>
+    <p>
+      <!-- <p>&copy; -->
+      <i class="fas fa-code"></i> with
+      <i class="fas fa-heart"></i> by &copy;
+      <a rel="noopener" href="https://github.com/jdvizueth" aria-label="My Github">
+        <span class="badge bg-dark"> Jose Vizueth </span>
+      </a> 2023
+    </p>
   </footer>
   <script src="script.js"></script>
   <script>
