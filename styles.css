@@ -101,6 +101,33 @@ nav ul li a:hover {
   font-weight: 200;
 }
 
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content img {
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    order: -1;
+  }
+
+  .text-content {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-content img {
+    width: 70%;
+    height: auto;
+  }
+}
+
+
 footer {
   background-color: #333;
   color: #fff;
@@ -245,6 +272,8 @@ footer {
 }
 
 .project-item {
+  position: relative;
+  /* Add position relative */
   display: flex;
   align-items: center;
   padding-bottom: 100px;
@@ -258,9 +287,9 @@ footer {
 .prev-arrow,
 .next-arrow {
   position: absolute;
-  margin-left: 2%;
   font-size: xx-large;
-  margin-right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .prev-arrow {
@@ -277,21 +306,6 @@ footer {
   max-width: 40%;
   height: auto;
 }
-
-/* .project-item a i {
-  position: absolute;
-  font-size: 48px;
-  color: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  transition: opacity 0.3s ease;
-} */
-
-/* .project-item a i:hover {
-  opacity: 1;
-} */
 
 .project-description {
   flex: 1;
@@ -316,6 +330,26 @@ footer {
   font-weight: 100;
 }
 
+@media only screen and (max-width: 768px) {
+  .project-item {
+    flex-direction: column;
+  }
+
+  .project-item video {
+    margin: 0;
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .prev-arrow,
+  .next-arrow {
+    position: static;
+    margin-top: 20px;
+    transform: translateY(0);
+    /* Reset translateY */
+  }
+}
+
 #skills {
   padding: 50px;
   font-family: 'Courier New', monospace;
@@ -334,15 +368,16 @@ footer {
 .skill-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 80%;
   margin-left: 10%;
 }
 
 .skill-card {
-  width: 40%;
-  width: calc(33.33% - 20px);
+  width: calc(100% / 3 - 20px);
   margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.5s, transform 0.5s;
@@ -368,7 +403,6 @@ footer {
 .skill-card:hover {
   transition-duration: 0.2s;
   box-shadow: 0 0 1rem #0f0;
-
 }
 
 .skill-title {
@@ -390,6 +424,20 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .skill-card {
+    width: calc(100% / 2 - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-card {
+    width: 100%;
+  }
+}
+
 
 #contact {
   text-align: center;
