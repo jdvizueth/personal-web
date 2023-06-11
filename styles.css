@@ -216,6 +216,26 @@ footer {
   font-weight: 100;
 }
 
+@media only screen and (max-width: 768px) {
+  #name-section h2 {
+    font-size: 30px;
+  }
+
+  #name-section h2::after {
+    width: 8px;
+    height: 20px;
+  }
+
+  #name-section h2 a {
+    font-size: 14px;
+  }
+
+  #name-section h3 {
+    font-size: 10px;
+  }
+}
+
+
 .social-links {
   display: flex;
   justify-content: center;
